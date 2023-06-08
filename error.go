@@ -154,6 +154,15 @@ func (es Errors) MarshalJSON() ([]byte, error) {
 	return json.Marshal(errs)
 }
 
+// Map 将所有的错误以 map[字段名]错误消息 的格式返回
+func (es Errors) Map() map[string]string {
+	allErr := map[string]string{}
+	for field, err := range es {
+		allErr[field] = err.Error()
+	}
+	return allErr
+}
+
 // Filter removes all nils from Errors and returns back the updated Errors as an error.
 // If the length of Errors becomes 0, it will return nil.
 func (es Errors) Filter() error {
