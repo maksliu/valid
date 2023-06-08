@@ -14,7 +14,7 @@ import (
 func TestAll(t *testing.T) {
 	tests := []struct {
 		tag            string
-		rule           validation.Rule
+		rule           valid.Rule
 		valid, invalid string
 		err            string
 	}{

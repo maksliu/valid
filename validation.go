@@ -13,13 +13,13 @@ import (
 )
 
 type (
-	// Validatable is the interface indicating the type implementing it supports data validation.
+	// Validatable is the interface indicating the type implementing it supports data valid.
 	Validatable interface {
 		// Validate validates the data and returns an error if validation fails.
 		Validate() error
 	}
 
-	// ValidatableWithContext is the interface indicating the type implementing it supports context-aware data validation.
+	// ValidatableWithContext is the interface indicating the type implementing it supports context-aware data valid.
 	ValidatableWithContext interface {
 		// ValidateWithContext validates the data with the given context and returns an error if validation fails.
 		ValidateWithContext(ctx context.Context) error

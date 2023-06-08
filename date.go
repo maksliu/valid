@@ -26,9 +26,9 @@ type DateRule struct {
 // The format of the date should be specified as the layout parameter which accepts the same value as that for time.Parse.
 // For example,
 //
-//	validation.Date(time.ANSIC)
-//	validation.Date("02 Jan 06 15:04 MST")
-//	validation.Date("2006-01-02")
+//	valid.Date(time.ANSIC)
+//	valid.Date("02 Jan 06 15:04 MST")
+//	valid.Date("2006-01-02")
 //
 // By calling Min() and/or Max(), you can let the Date rule to check if a parsed date value is within
 // the specified date range.
@@ -66,13 +66,13 @@ func (r DateRule) RangeErrorObject(err Error) DateRule {
 	return r
 }
 
-// Min sets the minimum date range. A zero value means skipping the minimum range validation.
+// Min sets the minimum date range. A zero value means skipping the minimum range valid.
 func (r DateRule) Min(min time.Time) DateRule {
 	r.min = min
 	return r
 }
 
-// Max sets the maximum date range. A zero value means skipping the maximum range validation.
+// Max sets the maximum date range. A zero value means skipping the maximum range valid.
 func (r DateRule) Max(max time.Time) DateRule {
 	r.max = max
 	return r

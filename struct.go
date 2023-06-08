@@ -51,9 +51,9 @@ func (e ErrFieldNotFound) Error() string {
 //	    Name  string
 //	    Value string
 //	}{"name", "demo"}
-//	err := validation.ValidateStruct(&value,
-//	    validation.Field(&a.Name, validation.Required),
-//	    validation.Field(&a.Value, validation.Required, validation.Length(5, 10)),
+//	err := valid.ValidateStruct(&value,
+//	    valid.Field(&a.Name, valid.Required),
+//	    valid.Field(&a.Value, valid.Required, valid.Length(5, 10)),
 //	)
 //	fmt.Println(err)
 //	// Value: the length must be between 5 and 10.

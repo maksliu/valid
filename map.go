@@ -42,9 +42,9 @@ type (
 // be associated with multiple rules.
 // For example,
 //
-//	validation.Map(
-//	    validation.Key("Name", validation.Required),
-//	    validation.Key("Value", validation.Required, validation.Length(5, 10)),
+//	valid.Map(
+//	    valid.Key("Name", valid.Required),
+//	    valid.Key("Value", valid.Required, valid.Length(5, 10)),
 //	)
 //
 // A nil value is considered valid. Use the Required rule to make sure a map value is present.
